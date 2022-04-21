@@ -1,2 +1,2 @@
 supervisorctl restart all
-yes yes | python /home/docker/code/app/manage.py collectstatic
+yes yes | python3 /home/docker/code/app/manage.py collectstatic -h

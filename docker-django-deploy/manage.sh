@@ -11,7 +11,7 @@ fi
 
 if [ $1 = "run" ]
 then
-	docker run  --name="cdocker_$appname" -d -p 7480:80 -v `pwd`/django/$appname:/home/docker/code/app docker_$appname
+	docker run  --name="cdocker_$appname" -d -p 7480:80 -v `pwd`/django/$appname:/home/docker/code/app docker_$appname -e mysql_password $mysql_password -e SECRET_KEY $SECRET_KEY 
 fi
 
 if [ $1 = "start" ]
